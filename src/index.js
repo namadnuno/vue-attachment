@@ -1,6 +1,6 @@
 import VueAttachment from './Attachments';
 
 export default {
-    VueAttachment,
+    ...VueAttachment,
     install: vue => vue.component('v-attachment', VueAttachment)
 }

@@ -1,11 +1,11 @@
 {
   "name": "vue-attachment",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Vue component to attach files",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "storybook": "start-storybook"
-  },
+   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/namadnuno/vue-attachment.git"

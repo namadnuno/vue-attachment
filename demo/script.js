@@ -270,13 +270,18 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Attachments__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Attachments */ "../src/Attachments.vue");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  VueAttachment: _Attachments__WEBPACK_IMPORTED_MODULE_0__["default"],
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+/* harmony default export */ __webpack_exports__["default"] = (_objectSpread({}, _Attachments__WEBPACK_IMPORTED_MODULE_0__["default"], {
   install: function install(vue) {
     return vue.component('v-attachment', _Attachments__WEBPACK_IMPORTED_MODULE_0__["default"]);
   }
-});
+}));
 
 /***/ }),
 
@@ -291,10 +296,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _src_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/index */ "../src/index.js");
+/* harmony import */ var _src_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/index.js */ "../src/index.js");
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_src_index__WEBPACK_IMPORTED_MODULE_1__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_src_index_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+console.log(_src_index_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: "#app"
 });
