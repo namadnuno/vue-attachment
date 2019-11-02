@@ -270,6 +270,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     value: {
@@ -316,15 +319,17 @@ __webpack_require__.r(__webpack_exports__);
         method: 'POST',
         body: formData
       }).then(function (response) {
-        _this.attachments.push(response.data);
+        return response.json();
+      }).then(function (data) {
+        _this.attachments.push(data);
 
         _this.$emit('input', _this.attachments);
 
-        _this.$emit('success', response.data);
+        _this.$emit('success', data);
 
         _this.sending = false;
       })["catch"](function (err) {
-        _this.$emit('error', response.data);
+        _this.$emit('error', data);
 
         _this.sending = false;
       });
@@ -351,7 +356,7 @@ exports = module.exports = __webpack_require__(/*! ../demo/node_modules/css-load
 
 
 // module
-exports.push([module.i, ".attachments {\n  margin-top: 10px;\n}\n.attachments .attachments-list {\n  margin-top: 20px;\n}\n.attachments .attachments-list h6 {\n  color: #005CA8;\n  font-weight: 500;\n  font-size: 14px;\n}\n.attachments .attachments-list h6 i {\n  margin-right: 5px;\n}\n.attachments .attachments-list ul {\n  list-style: none;\n  padding: 0px;\n}\n.attachments .attachments-list ul li {\n  font-size: 13px;\n  color: #005CA8;\n}\n.attachments .attachments-list ul li button {\n  color: red;\n}\n.attachments .uploader-panel {\n  display: flex;\n  align-items: center;\n}\n.attachments .uploader-panel .text {\n  margin-left: 18px;\n  font-size: 12px;\n}\n.attachments .uploader-panel .icon svg {\n  width: 36px;\n}\n.attachments .uploader-panel .icon svg path {\n  fill: #005CA8;\n}\n.attachments .uploader {\n  height: 89px;\n  width: 89px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 32px;\n  color: #005CA8;\n  border: 2px dotted #005CA8;\n  background: transparent;\n  border-radius: 5px;\n}\n", ""]);
+exports.push([module.i, ".attachments {\n  margin-top: 10px;\n}\n.attachments .attachments-list {\n  margin-top: 20px;\n}\n.attachments .attachments-list h6 {\n  color: #005CA8;\n  font-weight: 500;\n  font-size: 14px;\n}\n.attachments .attachments-list h6 i {\n  margin-right: 5px;\n}\n.attachments .attachments-list ul {\n  list-style: none;\n  padding: 0px;\n}\n.attachments .attachments-list ul li {\n  font-size: 13px;\n  color: #005CA8;\n}\n.attachments .attachments-list ul li button {\n  color: red;\n}\n.attachments .uploader-panel {\n  display: flex;\n  align-items: center;\n}\n.attachments .uploader-panel .text {\n  margin-left: 18px;\n  font-size: 12px;\n}\n.attachments .uploader-panel .icon svg {\n  width: 36px;\n}\n.attachments .uploader-panel .icon svg path {\n  fill: #005CA8;\n}\n.attachments .btn.remove {\n  background: transparent;\n  border: none;\n  outline: none;\n}\n.attachments .btn.remove svg {\n  width: 18px;\n}\n.attachments .btn.remove svg path {\n  fill: #e74c3c;\n}\n.attachments .btn.remove:hover {\n  cursor: pointer;\n}\n.attachments .btn.remove:hover path {\n  fill: #c0392b;\n}\n.attachments .uploader {\n  height: 89px;\n  width: 89px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 32px;\n  color: #005CA8;\n  border: 2px dotted #005CA8;\n  background: transparent;\n  border-radius: 5px;\n}\n", ""]);
 
 // exports
 
@@ -1535,6 +1540,12 @@ var render = function() {
             _vm._l(_vm.attachments, function(attachment, index) {
               return _c("li", { key: "attachment-" + index }, [
                 _c(
+                  "a",
+                  { attrs: { href: "/" + attachment, target: "_blank" } },
+                  [_vm._v(_vm._s(attachment.split("/").reverse()[0]))]
+                ),
+                _vm._v(" "),
+                _c(
                   "button",
                   {
                     staticClass: "btn remove",
@@ -1545,13 +1556,32 @@ var render = function() {
                       }
                     }
                   },
-                  [_c("i", { staticClass: "zmdi zmdi-close" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { attrs: { href: "/" + attachment, target: "_blank" } },
-                  [_vm._v(_vm._s(attachment.split("/").reverse()[0]))]
+                  [
+                    _c(
+                      "svg",
+                      {
+                        attrs: {
+                          "enable-background": "new 0 0 515.556 515.556",
+                          viewBox: "0 0 515.556 515.556",
+                          xmlns: "http://www.w3.org/2000/svg"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "m64.444 451.111c0 35.526 28.902 64.444 64.444 64.444h257.778c35.542 0 64.444-28.918 64.444-64.444v-322.222h-386.666z"
+                          }
+                        }),
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "m322.222 32.222v-32.222h-128.889v32.222h-161.111v64.444h451.111v-64.444z"
+                          }
+                        })
+                      ]
+                    )
+                  ]
                 )
               ])
             }),
