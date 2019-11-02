@@ -34,12 +34,11 @@
       <div class="attachments-list">
           <h6><i class="zmdi zmdi-attachment"></i> Attachments</h6>
           <ul v-if="attachments.length > 0">
-              <li v-for="(attachment, index) in attachments" :key="'attachment-' + index">
-                <a :href="'/' + attachment" target="_blank">{{ attachment.split('/').reverse()[0] }}</a>
-                <button class="btn remove" @click="remove(index)" type="button">
-                    <svg enable-background="new 0 0 515.556 515.556" viewBox="0 0 515.556 515.556" xmlns="http://www.w3.org/2000/svg"><path d="m64.444 451.111c0 35.526 28.902 64.444 64.444 64.444h257.778c35.542 0 64.444-28.918 64.444-64.444v-322.222h-386.666z"/><path d="m322.222 32.222v-32.222h-128.889v32.222h-161.111v64.444h451.111v-64.444z"/></svg>
-                </button>
-              </li>
+              <item 
+              v-for="(attachment, index) in attachments" 
+              :key="'attachment-' + index" 
+              :attachment="attachment" 
+              @remove="() => remove(index)" />
           </ul>
           <p v-else>
               There is nothing here.
@@ -49,7 +48,12 @@
 </template>
 
 <script>
+import Item from "./Item";
+
 export default {
+    components: {
+        Item
+    },
     props: {
         value: {
             type: Array,
@@ -123,7 +127,8 @@ export default {
             color: #005CA8;
             font-weight: 500;
             font-size: 14px;
-
+            margin-bottom: 6px;
+            
             i {
                 margin-right: 5px;
             }
@@ -161,28 +166,6 @@ export default {
                 path {
                     fill: #005CA8;
                 }
-            }
-        }
-    }
-    .btn.remove {
-        background: transparent;
-        border: none;
-        outline: none;
-
-        svg {
-            width: 18px;
-
-            path {
-                fill: #e74c3c;
-            }
-        }
-
-
-        &:hover {
-            cursor: pointer;
-
-            path {
-                fill: #c0392b;
             }
         }
     }
