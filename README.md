@@ -8,9 +8,11 @@
     </p>
 </center>
 
-[![Latest Version on NPM][ico-version]][link-npm]
-[![Software License][ico-license]](LICENSE.md)
-[![Total Downloads][ico-downloads]][link-downloads]
+<p>
+  <a href="https://www.npmjs.com/package/vue-attachment"><img src="https://img.shields.io/npm/v/vue-attachment.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/vue-attachment"><img src="https://img.shields.io/npm/dm/vue-attachment.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/vue-attachment"><img src="https://img.shields.io/npm/l/vue-attachment.svg" alt="License"></a>
+</p>
 
 This component provides an simple and out-of-box experience for file attachments.
 
@@ -33,6 +35,7 @@ npm i vue-attachment --save
 ## Usage
 
 Import Globally:
+
 ```
 import Vue from 'vue'
 
@@ -42,6 +45,8 @@ Vue.use(VueAttachment)
 ```
 
 Import as a Component:
+
+```
 import VueAttachment from 'vue-attachment'
 
 
@@ -50,6 +55,7 @@ import VueAttachment from 'vue-attachment'
     components: { VueAttachment }
 }
 ...
+```
 
 ### Example
 ```
@@ -82,7 +88,7 @@ import VueAttachment from 'vue-attachment'
 | Name                    | Type     | Required | Default         | Info                                                                        |
 | ----------------------- | -------- | -------- | --------------- | --------------------------------------------------------------------------- |
 | **value**               | Array    | False    | []              | List of files imported (v-model when binding is important)                  |
-| **endpoint**            | String   | False    | upload.php      | Method that should returns the thumb url for the uploaded file              |
+| **endpoint**            | String   | False    | upload.php      | Upload Endpoint              |
 
 ### Events
 
@@ -90,10 +96,9 @@ import VueAttachment from 'vue-attachment'
 | ------------ | -------------------------------- | -------------------------------------------------------------------------- |
 | **success**  | server message                   | Triggered after sending file with success                                  |
 | **error**    | server message                   | Triggered after sending file without success                               |
-| **removed**  | filename                         | Triggered remove a file                                                    |
-| **input**    | attachments                      | Triggered after an change on attachments file                              |
+| **removed**  | filename                         | Triggered when a file is remove                                                     |
+| **input**    | attachments                      | Triggered after a change on attachments files                              |
 
 ## License
 
-This project is licensed under
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
