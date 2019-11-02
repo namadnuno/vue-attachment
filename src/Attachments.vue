@@ -108,9 +108,10 @@ export default {
             });
         },
         remove(index) {
+            let file = this.attachments[index];
             this.attachments.splice(index, 1);
             this.$emit('input', this.attachments);
-            this.$emit('removed', response.data);
+            this.$emit('removed', file);
         }
     }
 }
@@ -128,7 +129,7 @@ export default {
             font-weight: 500;
             font-size: 14px;
             margin-bottom: 6px;
-            
+
             i {
                 margin-right: 5px;
             }

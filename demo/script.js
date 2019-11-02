@@ -432,9 +432,10 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     remove: function remove(index) {
+      var file = this.attachments[index];
       this.attachments.splice(index, 1);
       this.$emit('input', this.attachments);
-      this.$emit('removed', response.data);
+      this.$emit('removed', file);
     }
   }
 });
