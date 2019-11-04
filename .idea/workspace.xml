@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a76110c2-481f-4672-b366-5b10b7bcfacc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/demo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/demo/upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/demo/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Attachments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Attachments.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572905183353</updated>
-      <workItem from="1572905186185" duration="1123000" />
+      <workItem from="1572905186185" duration="1200000" />
     </task>
     <servers />
   </component>

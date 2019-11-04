@@ -2271,35 +2271,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.$emit('error', err);
 
         _this.sending = false;
-      }); // fetch(this.endpoint, {
-      //         method: 'POST',
-      //         body: formData
-      //     }
-      // )
-      // .then(
-      //     fetchProgress({
-      //     onProgress(progress) {
-      //         console.log( progress );
-      //     },
-      //     onError(err) {
-      //         console.log(err);
-      //             this.$emit('error', err);
-      //             this.sending = false;
-      //     },
-      //     })
-      // ).then(response => response.json() )
-      // .then(data => {
-      // });
-      // .then(data => {
-      //     this.attachments.push(data);
-      //     this.$emit('input', this.attachments);
-      //     this.$emit('success', data);
-      //     this.sending = false;
-      // }).catch(err => {
-      //     console.log(err);
-      //     this.$emit('error', err);
-      //     this.sending = false;
-      // });
+      });
     },
     remove: function remove(index) {
       var file = this.attachments[index];
@@ -3712,7 +3684,7 @@ var render = function() {
         attrs: { type: "button" },
         on: {
           click: function($event) {
-            return _vm.remove(_vm.index)
+            return _vm.$emit("remove")
           }
         }
       },
@@ -3772,7 +3744,7 @@ var render = function() {
     {
       staticClass: "uploader",
       class: { "is-loading": _vm.sending },
-      attrs: { type: "button" },
+      attrs: { type: "button", disabled: _vm.sending },
       on: {
         click: function($event) {
           return _vm.$emit("click")
