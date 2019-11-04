@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "storybook": "start-storybook"
-   },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/namadnuno/vue-attachment.git"
@@ -28,6 +28,8 @@
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "fetch-progress": "^1.2.0",
     "vue": "^2.6.10"
   }
 }

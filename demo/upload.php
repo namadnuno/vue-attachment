@@ -31,7 +31,7 @@ if (file_exists($target_file)) {
 }
 
 // Check file size
-if ($_FILES["file"]["size"] > 500000) {
+if ($_FILES["file"]["size"] > 50000000) {
     response("Sorry, your file is too large.", 500);
     $uploadOk = 0;
 }
