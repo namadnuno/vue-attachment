@@ -10,7 +10,7 @@
     "cross-env": "^6.0.3",
     "fetch-progress": "^1.2.0",
     "laravel-mix": "^5.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "regenerator-runtime": "^0.13.3",
     "sass-loader": "^8.0.0",
     "vue": "^2.6.10"
