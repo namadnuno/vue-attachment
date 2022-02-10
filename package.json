@@ -22,7 +22,7 @@
     "@storybook/vue": "^5.2.5",
     "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.0",
     "vue-loader": "^15.7.2",
     "vue-template-compiler": "^2.6.10"
